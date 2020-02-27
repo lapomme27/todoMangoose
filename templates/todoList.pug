@@ -1,0 +1,34 @@
+doctype html
+html
+	head
+		title
+		link(rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css")
+	body(class="container-fluid")
+		h1 Todo List
+		//début de la page
+		div(class="row-justify-content-center")
+
+		div(class="col-4")
+
+			form(method="post" action= 'todo/insert')
+				
+				label A faire
+				div(class='form-group')
+					input(type="text" name="todo" class="form-control")
+
+				label Fait
+				div(class='form-group')
+					input(type="radio" name="done" checked value="true")
+					label(for="huey") Oui
+
+					input(type="radio" name="done" value="false")
+					label(for="huey") Non
+
+				label Catégorie
+				div(class='form-group')
+					input(type="text" name="categorie" class="form-control")
+				
+				div(class='form-group')
+					button(type="submit" class="form-control btn btn-danger") Valider
+			
+

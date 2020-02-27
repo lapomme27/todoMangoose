@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		title
+		link(rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css")
+	body(class="container-fluid")
+		h1 Todo List
+		//début de la page
+		div(class="row-justify-content-center")
+
+			div(class="col-4")
+				
+				table
+					tr
+						th A faire
+						th Catégorie
+						th supprimer
+							each item in data
+								tr
+									td #{item.taskName} 
+									td #{item.categorie}
+									td
+										a(button type="submit" class="form-control btn btn-danger" href='/todo/delete/'+item._id) Supprimer
